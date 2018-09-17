@@ -6,7 +6,7 @@ DIRS =	src \
 	src/common \
 	src/contrib/epee/include
 
-CPPDEFS = 
+CPPDEFS =
 CCPARAM = -s WASM=1
 CXXFLAGS =  -std=c++11
 
@@ -70,3 +70,5 @@ dirs:
 run: $(TARGET)
 	emrun --no_browser --no_emrun_detect --port 8080 $(STORE)/$(TARGET).html
 
+docker:
+	docker build -t eyedeekay/xmr-wasm .
